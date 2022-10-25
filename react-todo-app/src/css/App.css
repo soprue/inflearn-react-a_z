@@ -1,0 +1,42 @@
+* {
+  margin: 0; 
+  padding: 0; 
+  border: 0; 
+  border-collapse: collapse; 
+  box-sizing: border-box; 
+  word-wrap: break-word; 
+}
+
+body {
+  margin: 0;
+}
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(228, 235, 244);
+}
+
+.todoBlock {
+  /* width: 100%; */
+  width: 75%;
+  max-width: 750px;
+  padding: 1.25rem;
+  margin: 1rem;
+  background-color: #fff;
+  border-radius: 0.25rem;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 3px 8px;
+}
+
+.title {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+.title button {
+  cursor: pointer;
+  background-color: transparent;
+}
