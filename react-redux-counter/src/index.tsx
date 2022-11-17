@@ -3,9 +3,11 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import { applyMiddleware, createStore } from 'redux';
+
 import rootReducer from './reducers';
+import { applyMiddleware, createStore } from 'redux';
 import { Provider } from 'react-redux';
+import thunk from 'redux-thunk';
 
 const loggerMiddleware = (store: any) => (next: any) => (action: any) => {
   console.log("store", store);
@@ -13,7 +15,7 @@ const loggerMiddleware = (store: any) => (next: any) => (action: any) => {
   next(action);
 }
 
-const middleware = applyMiddleware(loggerMiddleware);
+const middleware = applyMiddleware(thunk, loggerMiddleware);
 const store = createStore(rootReducer, middleware);
 
 const root = ReactDOM.createRoot(
